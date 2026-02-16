@@ -12,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 API_KEY = os.getenv("HYPERBOLIC_API")
-BASE_URL = os.getenv("AI_BASE_URL", "https://api.hyperbolic.xyz/v1/chat/completions")
+BASE_URL = os.getenv("AI_BASE_URL")
 
 # Premium emojis
 EMOJI = {
@@ -27,7 +27,6 @@ EMOJI = {
     "ghost": "5987594979432731998"     # 👻
 }
 
-# Safe reply helper
 async def safe_reply(update: Update, text: str, **kwargs) -> Message:
     if update.message:
         return await update.message.reply_text(
@@ -38,7 +37,6 @@ async def safe_reply(update: Update, text: str, **kwargs) -> Message:
     else:
         return await update.effective_chat.send_message(text, **kwargs)
 
-# Tag converter
 def format_ai_response(text: str) -> str:
     """Convert Markdown-style formatting into HTML tags."""
     text = re.sub(r"\*\*(.*?)\*\*", r"<b>\1</b>", text)   # bold
@@ -156,7 +154,7 @@ async def ai_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await asyncio.sleep(2)
         await searching_msg.delete()
 
-# Main entry
+# Main
 def main():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
