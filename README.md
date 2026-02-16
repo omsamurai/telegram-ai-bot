@@ -39,8 +39,7 @@ python bot.py
 # 🛠️ Bot Commands:
 
 - `/start` — Welcome message
-- `/me` — Show your user info
-- `/about` — Bot details
+- `/ai` — Get answer from ai
 - `/help` — Help menu
 
 # 😎 Developer
