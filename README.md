@@ -47,6 +47,6 @@ python bot.py
 
 👤 <b>Developed by Om</b>
 <br>
-🤖 <b>Bot:</b> @isthisme_bot
+🤖 <b>Bot:</b> [@isthisme_bot](https://t.me/isthisme_bot)
 <br>
-🔗 <b>Telegram:</b> @unseen_crafts
+🔗 <b>Telegram:</b> [@unseen_crafts](https://t.me/unseen_crafts)
