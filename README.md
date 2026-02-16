@@ -24,8 +24,9 @@ pip install -r requirements.txt
 
 **4. Create a `.env` file with:**
 ```bash
-BOT_TOKEN=your_token_here
-HYPERBOLIC_API=your_hyperbolic_api_key
+BOT_TOKEN=your_telegram_token
+HYPERBOLIC_API=your_api_key
+AI_BASE_URL=https://api.hyperbolic.xyz/v1/chat/completions
 ```
 
 **5. Run bot:**
